@@ -8,11 +8,10 @@ import FriendList from "../components/FriendList";
 const Home = () => {
 	// use useQuery hook to make query request
 	const { loading, data } = useQuery(QUERY_THOUGHTS);
-	const thoughts = data?.thoughts || [];
-	console.log(thoughts);
-
 	// use object destructuring to extract `data` from the `useQuery` Hook's response and rename it `userData` to be more descriptive
 	const { data: userData } = useQuery(QUERY_ME_BASIC);
+  const thoughts = data?.thoughts || [];
+	
 	const loggedIn = Auth.loggedIn();
 
 	return (

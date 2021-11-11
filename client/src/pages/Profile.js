@@ -1,12 +1,12 @@
 import React from "react";
 import { Redirect, useParams } from "react-router-dom";
-import Auth from "../utils/auth";
 
 import ThoughtList from "../components/ThoughtList";
 import FriendList from "../components/FriendList";
 
 import { useQuery } from "@apollo/client";
 import { QUERY_USER, QUERY_ME } from "../utils/queries";
+import Auth from "../utils/auth";
 
 const Profile = () => {
 	const { username: userParam } = useParams();
@@ -33,7 +33,7 @@ const Profile = () => {
 			</h4>
 		);
 	}
-	
+
 	return (
 		<div>
 			<div className="flex-row mb-3">

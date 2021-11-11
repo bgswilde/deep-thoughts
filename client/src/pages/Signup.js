@@ -9,6 +9,7 @@ const Signup = () => {
 		email: "",
 		password: "",
 	});
+	const [addUser, { error }] = useMutation(ADD_USER);
 
 	// update state based on form input changes
 	const handleChange = (event) => {
@@ -19,8 +20,6 @@ const Signup = () => {
 			[name]: value,
 		});
 	};
-
-	const [addUser, { error }] = useMutation(ADD_USER);
 
 	// submit form (notice the async!)
 	const handleFormSubmit = async (event) => {
